@@ -110,24 +110,26 @@ public class ExampleEntityModel<T extends ExampleEntity> extends EntityModel<T> 
 		}
 
 		@Override
-		public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
-			RearLeftFoot.render(matrixStack, buffer, packedLight, packedOverlay);
-			rearFootRight.render(matrixStack, buffer, packedLight, packedOverlay);
-			body.render(matrixStack, buffer, packedLight, packedOverlay);
-			frontLegLeft.render(matrixStack, buffer, packedLight, packedOverlay);
-			frontLegRight.render(matrixStack, buffer, packedLight, packedOverlay);
-			head.render(matrixStack, buffer, packedLight, packedOverlay);
-			earRight.render(matrixStack, buffer, packedLight, packedOverlay);
-			earLeft.render(matrixStack, buffer, packedLight, packedOverlay);
-			tail.render(matrixStack, buffer, packedLight, packedOverlay);
-			nose.render(matrixStack, buffer, packedLight, packedOverlay);
+		public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn,
+				float red, float green, float blue, float alpha) {
+			RearLeftFoot.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn);
+			rearFootRight.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn);
+			body.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn);
+			frontLegLeft.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn);
+			frontLegRight.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn);
+			head.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn);
+			earRight.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn);
+			earLeft.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn);
+			tail.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn);
+			nose.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn);
 		}
 
 		public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
 			modelRenderer.rotateAngleX = x;
 			modelRenderer.rotateAngleY = y;
 			modelRenderer.rotateAngleZ = z;
-		}
 	}
+}
+
 
 
