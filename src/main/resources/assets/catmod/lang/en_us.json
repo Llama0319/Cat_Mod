@@ -1,0 +1,22 @@
+{
+	"item.catmod.screaming_cat": "Screaming Cat",
+	"item.catmod.cat_gem": "Cat Gem",
+	"item.catmod.super_cat_gem": "Super Cat Gem",
+	"item.catmod.heart_gem": "Heart Gem",
+	"item.catmod.fish_biscuit": "Fish Biscuit",
+	"item.catmod.golden_treat": "Golden Treat",
+	"item.catmod.acorn": "Acorn",
+	"item.catmod.fish_taco": "Fish Taco",
+	"item.catmod.cat_staff": "Cat Staff",
+	"item.catmod.cat_sword": "Super Cat Sword",
+	"item.catmod.cat_pickaxe": "Cat Pickaxe",
+	"item.catmod.cat_shovel": "Cat Shovel",
+	"item.catmod.cat_axe": "Cat Axe",
+	"item.catmod.cat_hoe": "Cat Hoe",
+	"block.catmod.cat_ore": "Cat Ore",
+	"block.catmod.heart_ore": "Heart Ore",
+	"block.catmod.custom_block": "Cat Bed",
+	"tooltip.cat_staff.hold_shift": "Hold \u00A7eShift \u00A77for More Information",
+	"itemGroup.catmodtab": "Cat Mod"
+}
+

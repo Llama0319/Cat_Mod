@@ -1,0 +1,15 @@
+modLoader="javafml"
+loaderVersion="[35,)"
+license="All rights reserved"
+
+[[mods]]
+modId="catmod"
+version="1.0"
+displayName="All Things Cats"
+logoFile="screamingcat.png"
+credits="Thanks to Jinx_The_Cat0319 for inspiring me to make this mod :D"
+authors="Mod created by Llama0319, Mod inspired by Jinx_The_Cat0319, Textures created by Llama0319"
+description='''
+A mod with everything cats, for all kinds of cat people.
+(And other kinds of people but mostly cat people :D)
+'''

@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": [
+        {
+            "tag": "catmod:cat_ore"
+        }
+    ],
+    "result": "catmod:cat_gem",
+    "experience": 0.5,
+    "cookingtime": 20
+}

@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"": { "model": "catmod:block/heart_ore" }
+	}
+}

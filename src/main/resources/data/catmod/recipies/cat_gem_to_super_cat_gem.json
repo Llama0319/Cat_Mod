@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"###",
+		"###",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "cadmod:cat_gem"
+		}
+	},
+	"result": {
+		"item": "catmod:super_cat_gem",
+		"count": 4
+	}
+}
