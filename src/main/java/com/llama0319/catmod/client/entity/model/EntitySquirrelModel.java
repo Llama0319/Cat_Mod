@@ -1,13 +1,13 @@
 package com.llama0319.catmod.client.entity.model;
 
-import com.llama0319.catmod.common.entities.ExampleEntity;
+import com.llama0319.catmod.common.entities.EntitySquirrel;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 
-public class ExampleEntityModel<T extends ExampleEntity> extends EntityModel<T> {
+public class EntitySquirrelModel<T extends EntitySquirrel> extends EntityModel<T> {
 		private final ModelRenderer RearLeftFoot;
 		private final ModelRenderer rearFootLeft;
 		private final ModelRenderer haunchLeft;
@@ -23,7 +23,7 @@ public class ExampleEntityModel<T extends ExampleEntity> extends EntityModel<T> 
 		private final ModelRenderer tail_top;
 		private final ModelRenderer nose;
 
-		public ExampleEntityModel() {
+		public EntitySquirrelModel() {
 			textureWidth = 64;
 			textureHeight = 64;
 

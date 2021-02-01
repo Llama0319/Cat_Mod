@@ -2,7 +2,7 @@ package com.llama0319.catmod;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.llama0319.catmod.common.entities.ExampleEntity;
+import com.llama0319.catmod.common.entities.EntitySquirrel;
 import com.llama0319.catmod.core.init.BlockInit;
 import com.llama0319.catmod.core.init.EntityTypeInit;
 import com.llama0319.catmod.core.init.ItemInit;
@@ -30,7 +30,7 @@ public class Cat_Mod {
 
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
-		// EntityTypeInit.ENTITY_TYPES.register(bus);
+		EntityTypeInit.ENTITY_TYPES.register(bus);
 
 		MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGeneration::generateOres);
 
@@ -48,12 +48,12 @@ public class Cat_Mod {
 			return ItemInit.SCREAMING_CAT.get().getDefaultInstance();
 		}
 	}
-
+	
 	@SubscribeEvent
 	public void setup(final FMLCommonSetupEvent event) {
 
 		event.enqueueWork(() -> {
-			GlobalEntityTypeAttributes.put(EntityTypeInit.SQUIRREL.get(), ExampleEntity.registerAttributes().create());
+			GlobalEntityTypeAttributes.put(EntityTypeInit.SQUIRREL.get(), EntitySquirrel.registerAttributes().create());
 		});
 	}
 }
