@@ -54,13 +54,13 @@ import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 
-	public class EntitySquirrel extends AnimalEntity {
+	public class SquirrelEntity extends AnimalEntity {
 
-	protected static final DataParameter<Byte> CLIMBING = EntityDataManager.<Byte>createKey(EntitySquirrel.class, DataSerializers.BYTE);
+	protected static final DataParameter<Byte> CLIMBING = EntityDataManager.<Byte>createKey(SquirrelEntity.class, DataSerializers.BYTE);
 
     private int climbTimeWithoutLog = 0;
 
-    public EntitySquirrel(World worldIn) {
+    public SquirrelEntity(World worldIn) {
         super(EntityTypeInit.SQUIRREL.entityType, worldIn);
     }
 
@@ -77,7 +77,7 @@ import net.minecraftforge.registries.ForgeRegistries;
     @Override
     protected void registerData() {
         super.registerData();
-        this.dataManager.register(EntitySquirrel.CLIMBING, Byte.valueOf((byte) 0));
+        this.dataManager.register(SquirrelEntity.CLIMBING, Byte.valueOf((byte) 0));
     }
 
     @Override
@@ -110,11 +110,11 @@ import net.minecraftforge.registries.ForgeRegistries;
     }
 
     public boolean isBesideClimbableBlock() {
-        return (this.dataManager.get(EntitySquirrel.CLIMBING).byteValue() & 1) != 0;
+        return (this.dataManager.get(SquirrelEntity.CLIMBING).byteValue() & 1) != 0;
     }
 
     public void setBesideClimbableBlock(boolean climbing) {
-        byte b0 = this.dataManager.get(EntitySquirrel.CLIMBING).byteValue();
+        byte b0 = this.dataManager.get(SquirrelEntity.CLIMBING).byteValue();
 
         if (climbing) {
             b0 = (byte) (b0 | 1);
@@ -122,7 +122,7 @@ import net.minecraftforge.registries.ForgeRegistries;
             b0 = (byte) (b0 & -2);
         }
 
-        this.dataManager.set(EntitySquirrel.CLIMBING, Byte.valueOf(b0));
+        this.dataManager.set(SquirrelEntity.CLIMBING, Byte.valueOf(b0));
     }
 
     @Override
@@ -132,9 +132,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 
     @Override
     public AgeableEntity func_241840_a(ServerWorld world, AgeableEntity ageable) {
-        EntitySquirrel squirrel = new EntitySquirrel(this.world);
-        if (ageable instanceof EntitySquirrel) {
-            EntitySquirrel other = (EntitySquirrel) ageable;
+        SquirrelEntity squirrel = new SquirrelEntity(this.world);
+        if (ageable instanceof SquirrelEntity) {
+            SquirrelEntity other = (SquirrelEntity) ageable;
             if ((this.isAlbino() || other.isAlbino()) && !this.getVariantNameOrEmpty().equals(other.getVariantNameOrEmpty())) {
                 squirrel.setType(this.isAlbino() ? other.getVariant().get() : this.getVariant().get());
             } else {
@@ -152,7 +152,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 		return null;
 	}
 
-	private RegistryObject<EntityType<EntitySquirrel>> getVariant() {
+	private RegistryObject<EntityType<SquirrelEntity>> getVariant() {
 		return null;
 	}
 
@@ -167,7 +167,7 @@ import net.minecraftforge.registries.ForgeRegistries;
         return false;
     }
 
-    protected EntitySquirrel getBaseChild() {
+    protected SquirrelEntity getBaseChild() {
         return null; 
     }
 
@@ -195,7 +195,7 @@ import net.minecraftforge.registries.ForgeRegistries;
         return "albino".equals(this.getVariantNameOrEmpty());
     }
 
-    public static boolean canSquirrelSpawn(EntityType<EntitySquirrel> type, IServerWorld world, SpawnReason reason, BlockPos pos, Random rand) {
+    public static boolean canSquirrelSpawn(EntityType<SquirrelEntity> type, IServerWorld world, SpawnReason reason, BlockPos pos, Random rand) {
         Block below = world.getBlockState(pos.down()).getBlock();
         return MobEntity.canSpawnOn(type, world, reason, pos, rand) || below.isIn(BlockTags.LEAVES) || below.isIn(BlockTags.LOGS);
     }
