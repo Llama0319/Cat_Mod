@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "catmod:blocks/environment/cat_log_top",
+        "side": "catmod:blocks/environment/cat_log"
+    }
+}

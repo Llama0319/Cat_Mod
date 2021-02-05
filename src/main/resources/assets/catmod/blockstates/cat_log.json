@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "catmod:block/cat_log" },
+        "axis=z":   { "model": "catmod:block/cat_log", "x": 90 },
+        "axis=x":   { "model": "catmod:block/cat_log", "x": 90, "y": 90 }
+    }
+}

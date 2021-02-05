@@ -1,0 +1,6 @@
+{
+	"parent": "block/crop",
+	"textures": {
+		"crop": "catmod:blocks/crops/catnip_stage7"
+	}
+}

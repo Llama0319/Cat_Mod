@@ -26,8 +26,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemInit {
 
-	public static final Item super_cat_gem = null;
-
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Cat_Mod.MOD_ID);
 
 	public static final RegistryObject<Item> SCREAMING_CAT = ITEMS.register("screaming_cat",
@@ -50,7 +48,14 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> ACORN = ITEMS.register("acorn",
 			() -> new Item(new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-
+	
+	//Crops
+	public static final RegistryObject<Item> CATNIP_SEEDS = ITEMS.register("catnip_seeds",
+			() -> new BlockItem(BlockInit.CATNIP.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
+	public static final RegistryObject<Item> CATNIP = ITEMS.register("catnip",
+			() -> new Item(new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
 	// Food
 	public static final RegistryObject<Item> FISH_TACO = ITEMS.register("fish_taco",
 			() -> new Item(new Item.Properties().group(Cat_Mod.CATMOD_GROUP).food(FoodInit.FISH_TACO)));
@@ -58,6 +63,8 @@ public class ItemInit {
 	// Advanced Items
 	public static final RegistryObject<SpecialItem> CAT_STAFF = ITEMS.register("cat_staff",
 			() -> new SpecialItem(new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	// Fuel
 
 	// Block Items
 	public static final RegistryObject<BlockItem> CAT_ORE = ITEMS.register("cat_ore",
@@ -68,7 +75,16 @@ public class ItemInit {
 
 	public static final RegistryObject<BlockItem> CUSTOM_BLOCK = ITEMS.register("custom_block",
 			() -> new BlockItem(BlockInit.CUSTOM_BLOCK.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
+	public static final RegistryObject<BlockItem> PINK_GRASS = ITEMS.register("pink_grass",
+			() -> new BlockItem(BlockInit.PINK_GRASS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
+	public static final RegistryObject<BlockItem> CAT_LEAVES = ITEMS.register("cat_leaves",
+			() -> new BlockItem(BlockInit.CAT_LEAVES.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
+	public static final RegistryObject<BlockItem> CAT_TREE_SAPLING = ITEMS.register("cat_tree_sapling",
+			() -> new BlockItem(BlockInit.CAT_TREE_SAPLING.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
 	// Armor
 	public static final RegistryObject<ArmorItem> CAT_HELMET = ITEMS.register("cat_helmet",
 			() -> new ArmorItem(ModArmorMaterial.CAT, EquipmentSlotType.HEAD,
@@ -104,7 +120,7 @@ public class ItemInit {
 
 	public enum ModItemTier implements IItemTier {
 		CAT(5, 1000000, 50.0f, 1000.0f, 10000, () -> {
-			return Ingredient.fromItems(ItemInit.super_cat_gem);
+			return Ingredient.fromItems(ItemInit.SUPER_CAT_GEM.get());
 		});
 
 		private final int harvestLevel;
@@ -157,9 +173,10 @@ public class ItemInit {
 
 	// Armor
 	public enum ModArmorMaterial implements IArmorMaterial {
-		CAT(Cat_Mod.MOD_ID + ":cat_armor", 5, new int[] { 14, 18, 22, 14 }, 500, SoundEvent.feild_226124_Y_, 13.8F, () -> {
-			return Ingredient.fromItems(ItemInit.super_cat_gem);
-		});
+		CAT(Cat_Mod.MOD_ID + ":cat_armor", 5, new int[] { 14, 18, 22, 14 }, 420, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 6.9F,
+				() -> {
+					return Ingredient.fromItems(ItemInit.SUPER_CAT_GEM.get());
+				});
 
 		private static final int[] MAX_DAMAGE_ARRAY = new int[] { 32, 32, 32, 32 };
 		private final String name;
@@ -220,8 +237,8 @@ public class ItemInit {
 
 		@Override
 		public float getKnockbackResistance() {
-			return this.getKnockbackResistance();
+			return 0;
 		}
+
 	}
 }
-

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "catmod:blocks/environment/cat_tree_sapling"
+    }
+}

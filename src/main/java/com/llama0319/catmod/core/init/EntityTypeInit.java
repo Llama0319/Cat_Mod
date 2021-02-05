@@ -1,7 +1,7 @@
-package com.llama0319.catmod.core.init;
+ackage com.llama0319.catmod.core.init;
 
-import com.llama0319.catmod.Cat_Mod;
-import com.llama0319.catmod.common.entities.SquirrelEntity;
+import com.turtywurty.tutorialmod.TutorialMod;
+import com.turtywurty.tutorialmod.entities.ExampleEntity;
 
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -11,13 +11,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class EntityTypeInit {
-	
-	public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = new DeferredRegister(ForgeRegistries.ENTITIES, 
+
+	public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = new DeferredRegister<>(ForgeRegistries.ENTITIES,
 			Cat_Mod.MOD_ID);
 
-	public static final RegistryObject<EntityType<SquirrelEntity>> SQUIRREL = ENTITY_TYPES
-			.register("squirrel", 
-					() -> EntityType.Builder.<SquirrelEntity>create(SquirrelEntity::new, EntityClassification.CREATURE)
-					.size(0.4f, 0.5f)
-					.build(new ResourceLocation(Cat_Mod.MOD_ID, "squirrel").toString()));
+	public SquirrelEntity(EntityType<? extends TameableEntity> entityType, World world) {
+        super(entityType, world);
+}
 }

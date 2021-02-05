@@ -1,4 +1,4 @@
-package com.llama0319.catmod.world;
+package com.llama0319.catmod.world.gen;
 
 import com.llama0319.catmod.core.init.BlockInit;
 

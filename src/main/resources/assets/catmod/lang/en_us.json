@@ -1,4 +1,5 @@
 {
+	//Items
 	"item.catmod.screaming_cat": "Screaming Cat",
 	"item.catmod.cat_gem": "Cat Gem",
 	"item.catmod.super_cat_gem": "Super Cat Gem",
@@ -6,21 +7,38 @@
 	"item.catmod.fish_biscuit": "Fish Biscuit",
 	"item.catmod.golden_treat": "Golden Treat",
 	"item.catmod.acorn": "Acorn",
+	"item.catmod.cat_fuel": "Cat Fuel",
+	"item.catmod.catnip": "Catnip",
+	
+	//Foods
 	"item.catmod.fish_taco": "Fish Taco",
+	
+	//Tools
 	"item.catmod.cat_staff": "Cat Staff",
 	"item.catmod.cat_sword": "Super Cat Sword",
 	"item.catmod.cat_pickaxe": "Cat Pickaxe",
 	"item.catmod.cat_shovel": "Cat Shovel",
 	"item.catmod.cat_axe": "Cat Axe",
 	"item.catmod.cat_hoe": "Cat Hoe",
-	"item.catmod.cat_helmet": "Cat Helmet",
-	"item.catmod.cat_chestplate": "Cat Chestplate",
-	"item.catmod.cat_leggings": "Cat Leggings",
-	"item.catmod.cat_boots": "Cat Boots",
+	
+	//Armor
+	"item.catmod.cat_helmet": "Cat Suit Helmet",
+	"item.catmod.cat_chestplate": "Cat Suit Chestplate",
+	"item.catmod.cat_leggings": "Cat Suit Leggings",
+	"item.catmod.cat_boots": "Cat Suit Boots",
+	
+	//Blocks
 	"block.catmod.cat_ore": "Cat Ore",
 	"block.catmod.heart_ore": "Heart Ore",
 	"block.catmod.custom_block": "Cat Bed",
+	"block.catmod.catnip": "Catnip Seeds",
+	"block.catmod.pink_grass": "Pink Grass",
+	"block.tutorialmod.cat_log": "Cat Log",
+	"block.tutorialmod.cat_tree_sapling": "Cat Tree Sapling",
+	"block.tutorialmod.cat_leaves": "Cat Leaves",
+
+	//Special
 	"tooltip.cat_staff.hold_shift": "Hold \u00A7eShift \u00A77for More Information",
 	"itemGroup.catmodtab": "Cat Mod"
+	
 }
-

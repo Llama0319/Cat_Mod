@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "catmod:blocks/heart_ore"
+		"all": "catmod:blocks/ores/heart_ore"
 	}
 }

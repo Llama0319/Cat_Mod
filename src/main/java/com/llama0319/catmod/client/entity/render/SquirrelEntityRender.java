@@ -13,8 +13,7 @@ public class SquirrelEntityRender extends MobRenderer<SquirrelEntity, SquirrelEn
 	protected static final ResourceLocation TEXTURE = new ResourceLocation(Cat_Mod.MOD_ID,
 			"textures/entity/example_entity.png");
 
-	@SuppressWarnings("rawtypes")
-	public SquirrelEntityRender(EntityRendererManager renderManagerIn) {
+	public ExampleEntityRender(EntityRendererManager renderManagerIn) {
 		super(renderManagerIn, new SquirrelEntityModel(), 0.5f);
 	}
 
