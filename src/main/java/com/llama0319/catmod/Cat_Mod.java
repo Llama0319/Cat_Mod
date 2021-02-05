@@ -3,7 +3,6 @@ package com.llama0319.catmod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
 import com.llama0319.catmod.core.init.BlockInit;
 import com.llama0319.catmod.core.init.ItemInit;
 //import com.llama0319.catmod.core.init.EntityTypeInit;
@@ -12,6 +11,8 @@ import com.llama0319.catmod.core.init.SpawnEggInit;
 import com.llama0319.catmod.world.gen.OreGeneration;
 import com.llama0319.catmod.common.blocks.Catnip;
 
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -39,9 +40,9 @@ public class Cat_Mod {
 
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
-		//BiomeInit.BIOMES.register(bus);
-		//EntityTypeInit.ENTITY_TYPES.register(bus);
-		//SoundInit.SOUNDS.register(bus);
+		// BiomeInit.BIOMES.register(bus);
+		// EntityTypeInit.ENTITY_TYPES.register(bus);
+		// SoundInit.SOUNDS.register(bus);
 
 		MinecraftForge.EVENT_BUS.register(this);
 		MinecraftForge.EVENT_BUS.addListener(OreGeneration::generateOres);
@@ -63,6 +64,8 @@ public class Cat_Mod {
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
+
+		RenderTypeLookup.setRenderLayer(BlockInit.CAT_TREE_SAPLING.get(), RenderType.getCutout());
 
 	}
 

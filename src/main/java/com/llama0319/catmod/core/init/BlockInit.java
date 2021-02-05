@@ -2,6 +2,7 @@ package com.llama0319.catmod.core.init;
 
 
 import com.llama0319.catmod.Cat_Mod;
+import com.llama0319.catmod.common.blocks.CatSaplingBlock;
 import com.llama0319.catmod.common.blocks.Catnip;
 import com.llama0319.catmod.common.blocks.CustomBlock;
 import net.minecraft.block.AbstractBlock;
@@ -9,8 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.SaplingBlock;
-
+import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -47,12 +47,12 @@ public class BlockInit {
 	public static final RegistryObject<Block> PINK_GRASS = BLOCKS.register("pink_grass",
 			() -> new Block(Block.Properties.from(Blocks.GRASS_BLOCK)));
 
-	//public static final RegistryObject<Block> CAT_LOG = BLOCKS.register("cat_log",
-			//() -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
+	public static final RegistryObject<Block> CAT_LOG = BLOCKS.register("cat_log",
+			() -> new RotatedPillarBlock(Block.Properties.from(Blocks.OAK_LOG)));
 
 	public static final RegistryObject<Block> CAT_LEAVES = BLOCKS.register("cat_leaves",
 			() -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
 
 	public static final RegistryObject<Block> CAT_TREE_SAPLING = BLOCKS.register("cat_tree_sapling",
-	 () -> new SaplingBlock(null, Block.Properties.from(Blocks.OAK_SAPLING)));
+			() -> new CatSaplingBlock(null, Block.Properties.from(Blocks.OAK_SAPLING)));
 }

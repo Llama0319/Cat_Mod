@@ -33,9 +33,9 @@
 	"block.catmod.custom_block": "Cat Bed",
 	"block.catmod.catnip": "Catnip Seeds",
 	"block.catmod.pink_grass": "Pink Grass",
-	"block.tutorialmod.cat_log": "Cat Log",
-	"block.tutorialmod.cat_tree_sapling": "Cat Tree Sapling",
-	"block.tutorialmod.cat_leaves": "Cat Leaves",
+	"block.catmod.cat_log": "Cat Log",
+	"block.catmod.cat_tree_sapling": "Cat Tree Sapling",
+	"block.catmod.cat_leaves": "Cat Leaves",
 
 	//Special
 	"tooltip.cat_staff.hold_shift": "Hold \u00A7eShift \u00A77for More Information",

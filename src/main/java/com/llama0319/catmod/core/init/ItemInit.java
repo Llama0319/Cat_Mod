@@ -82,6 +82,9 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> CAT_LEAVES = ITEMS.register("cat_leaves",
 			() -> new BlockItem(BlockInit.CAT_LEAVES.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 	
+	public static final RegistryObject<BlockItem> CAT_LOG = ITEMS.register("cat_log",
+			() -> new BlockItem(BlockInit.CAT_LOG.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
 	public static final RegistryObject<BlockItem> CAT_TREE_SAPLING = ITEMS.register("cat_tree_sapling",
 			() -> new BlockItem(BlockInit.CAT_TREE_SAPLING.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 	
