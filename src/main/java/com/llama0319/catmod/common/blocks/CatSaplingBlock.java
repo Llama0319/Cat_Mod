@@ -17,6 +17,7 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.event.ForgeEventFactory;
 
 public class CatSaplingBlock extends BushBlock implements IGrowable {
 	public static final IntegerProperty STAGE = BlockStateProperties.STAGE_0_1;
@@ -46,7 +47,7 @@ public class CatSaplingBlock extends BushBlock implements IGrowable {
 		if (state.get(STAGE) == 0) {
 			world.setBlockState(pos, state.func_235896_a_(STAGE), 4);
 		} else {
-			if (!net.minecraftforge.event.ForgeEventFactory.saplingGrowTree(world, rand, pos))
+			if (ForgeEventFactory.saplingGrowTree(world, rand, pos))
 				return;
 			this.tree.attemptGrowTree(world, world.getChunkProvider().getChunkGenerator(), pos, state, rand);
 		}
