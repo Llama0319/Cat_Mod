@@ -76,6 +76,9 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> CUSTOM_BLOCK = ITEMS.register("custom_block",
 			() -> new BlockItem(BlockInit.CUSTOM_BLOCK.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 	
+	public static final RegistryObject<BlockItem> LITTER_BOX_RED = ITEMS.register("litter_box_red",
+			() -> new BlockItem(BlockInit.LITTER_BOX_RED.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
 	public static final RegistryObject<BlockItem> PINK_GRASS = ITEMS.register("pink_grass",
 			() -> new BlockItem(BlockInit.PINK_GRASS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 

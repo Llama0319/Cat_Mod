@@ -5,6 +5,8 @@ import com.llama0319.catmod.Cat_Mod;
 import com.llama0319.catmod.common.blocks.CatSaplingBlock;
 import com.llama0319.catmod.common.blocks.Catnip;
 import com.llama0319.catmod.common.blocks.CustomBlock;
+import com.llama0319.catmod.common.blocks.LitterBox;
+
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -37,6 +39,10 @@ public class BlockInit {
 	// Custom Blocks
 	public static final RegistryObject<CustomBlock> CUSTOM_BLOCK = BLOCKS.register("custom_block",
 			() -> new CustomBlock(AbstractBlock.Properties.create(Material.WOOD).harvestTool(ToolType.AXE)
+					.harvestLevel(-1).sound(SoundType.WOOD).setRequiresTool()));
+	
+	public static final RegistryObject<LitterBox> LITTER_BOX_RED = BLOCKS.register("litter_box_red",
+			() -> new LitterBox(AbstractBlock.Properties.create(Material.WOOD).harvestTool(ToolType.AXE)
 					.harvestLevel(-1).sound(SoundType.WOOD).setRequiresTool()));
 
 	// Crops

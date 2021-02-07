@@ -2,15 +2,11 @@ package com.llama0319.catmod;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import com.llama0319.catmod.core.init.BlockInit;
 import com.llama0319.catmod.core.init.ItemInit;
-//import com.llama0319.catmod.core.init.EntityTypeInit;
-//import com.llama0319.catmod.core.init.SoundInit;
 import com.llama0319.catmod.core.init.SpawnEggInit;
 import com.llama0319.catmod.world.gen.OreGeneration;
 import com.llama0319.catmod.common.blocks.Catnip;
-
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.EntityType;
@@ -40,7 +36,7 @@ public class Cat_Mod {
 
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
-		// BiomeInit.BIOMES.register(bus);
+		// BiomeInit.registerBiomes();
 		// EntityTypeInit.ENTITY_TYPES.register(bus);
 		// SoundInit.SOUNDS.register(bus);
 
