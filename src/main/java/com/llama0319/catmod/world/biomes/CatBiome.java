@@ -16,7 +16,7 @@ import net.minecraft.world.gen.placement.Placement;
 public class CatBiome extends Biome {
 
 	public CatBiome(Builder biomeBuilder) {
-		super(biomeBuilder);
+		super(biome Builder);
 		this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ZOMBIE, 10, 2, 5));
 		this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.BEE, 20, 2, 10));
 		this.addCarver(GenerationStage.Carving.AIR,
@@ -29,7 +29,7 @@ public class CatBiome extends Biome {
 						.withConfiguration(new TwoFeatureChoiceConfig(
 								Feature.FLOWER.withConfiguration(DefaultBiomeFeatures.withAllForestFlowerGeneration(null)),
 								Feature.BONUS_CHEST
-						.withPlacement(Placement.HEIGHTMAP.configure(new FrequencyConfig(1))));
+						.withPlacement(Placement.HEIGHTMAP.configure(new FrequencyConfig(1))))));
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 				Feature.RANDOM_PATCH.withConfiguration(DefaultBiomeFeatures.withJungleGrass(null).withPlacement(
 						Placement.COUNT_CHANCE_HEIGHTMAP.configure(new HeightWithChanceConfig(1, 0.25F)))));

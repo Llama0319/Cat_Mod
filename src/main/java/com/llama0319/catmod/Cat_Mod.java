@@ -2,6 +2,8 @@ package com.llama0319.catmod;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import com.llama0319.catmod.core.init.BiomeInit;
 import com.llama0319.catmod.core.init.BlockInit;
 import com.llama0319.catmod.core.init.FeatureInit;
 import com.llama0319.catmod.core.init.ItemInit;
@@ -15,6 +17,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -38,7 +41,7 @@ public class Cat_Mod {
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
 		FeatureInit.FEATURES.register(bus);
-		// BiomeInit.registerBiomes();
+		//BiomeInit.registerBiomes();
 		// EntityTypeInit.ENTITY_TYPES.register(bus);
 		// SoundInit.SOUNDS.register(bus);
 
@@ -82,5 +85,10 @@ public class Cat_Mod {
 	@SubscribeEvent
 	public static void onRegisterEntities(final RegistryEvent.Register<EntityType<?>> event) {
 		SpawnEggInit.initSpawnEggs();
+	}
+
+	@SubscribeEvent
+	public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
+		BiomeInit.registerBiomes();
 	}
 }

@@ -20,11 +20,12 @@ public class FeatureInit {
 	public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES,
 			Cat_Mod.MOD_ID);
 	public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAT_TREE = register("cat_tree",
-			Feature.TREE.withConfiguration(new BaseTreeFeatureConfig.Builder(
-					new SimpleBlockStateProvider(BlockInit.CAT_LOG.get().getDefaultState()),
-					new SimpleBlockStateProvider(BlockInit.CAT_LEAVES.get().getDefaultState()),
-					new BlobFoliagePlacer(FeatureSpread.func_242252_a(2), FeatureSpread.func_242252_a(0), 3),
-					new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1)).setIgnoreVines().build()));
+			Feature.TREE.withConfiguration(
+					new BaseTreeFeatureConfig.Builder(
+							new SimpleBlockStateProvider(BlockInit.CAT_LOG.get().getDefaultState()),
+							new SimpleBlockStateProvider(BlockInit.CAT_LEAVES.get().getDefaultState()),
+							new BlobFoliagePlacer(FeatureSpread.func_242252_a(2), FeatureSpread.func_242252_a(0), 3),
+							new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1)).setIgnoreVines().build()));
 
 	private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key,
 			ConfiguredFeature<FC, ?> configuredFeature) {
