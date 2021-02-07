@@ -1,8 +1,8 @@
 {
     "variants": {
-        "facing=north": { "model": "catmod:block/litter_box" },
-        "facing=south": { "model": "catmod:block/litter_box", "y": 180 },
-        "facing=west":  { "model": "catmod:block/litter_box", "y": 270 },
-        "facing=east":  { "model": "catmod:block/litter_box", "y": 90 }
+        "facing=north": { "model": "catmod:block/litter_box_red" },
+        "facing=south": { "model": "catmod:block/litter_box_red", "y": 180 },
+        "facing=west":  { "model": "catmod:block/litter_box_red", "y": 270 },
+        "facing=east":  { "model": "catmod:block/litter_box_red", "y": 90 }
     }
 }

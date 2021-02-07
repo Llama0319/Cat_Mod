@@ -1,6 +1,5 @@
 package com.llama0319.catmod.core.init;
 
-
 import com.llama0319.catmod.Cat_Mod;
 import com.llama0319.catmod.common.blocks.CatSaplingBlock;
 import com.llama0319.catmod.common.blocks.Catnip;
@@ -40,7 +39,7 @@ public class BlockInit {
 	public static final RegistryObject<CustomBlock> CUSTOM_BLOCK = BLOCKS.register("custom_block",
 			() -> new CustomBlock(AbstractBlock.Properties.create(Material.WOOD).harvestTool(ToolType.AXE)
 					.harvestLevel(-1).sound(SoundType.WOOD).setRequiresTool()));
-	
+
 	public static final RegistryObject<LitterBox> LITTER_BOX_RED = BLOCKS.register("litter_box_red",
 			() -> new LitterBox(AbstractBlock.Properties.create(Material.WOOD).harvestTool(ToolType.AXE)
 					.harvestLevel(-1).sound(SoundType.WOOD).setRequiresTool()));
@@ -60,5 +59,5 @@ public class BlockInit {
 			() -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
 
 	public static final RegistryObject<Block> CAT_TREE_SAPLING = BLOCKS.register("cat_tree_sapling",
-			() -> new CatSaplingBlock(null, Block.Properties.from(Blocks.OAK_SAPLING)));
+			CatSaplingBlock::new);
 }

@@ -3,6 +3,7 @@ package com.llama0319.catmod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.llama0319.catmod.core.init.BlockInit;
+import com.llama0319.catmod.core.init.FeatureInit;
 import com.llama0319.catmod.core.init.ItemInit;
 import com.llama0319.catmod.core.init.SpawnEggInit;
 import com.llama0319.catmod.world.gen.OreGeneration;
@@ -36,6 +37,7 @@ public class Cat_Mod {
 
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
+		FeatureInit.FEATURES.register(bus);
 		// BiomeInit.registerBiomes();
 		// EntityTypeInit.ENTITY_TYPES.register(bus);
 		// SoundInit.SOUNDS.register(bus);

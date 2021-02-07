@@ -48,14 +48,14 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> ACORN = ITEMS.register("acorn",
 			() -> new Item(new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-	
-	//Crops
+
+	// Crops
 	public static final RegistryObject<Item> CATNIP_SEEDS = ITEMS.register("catnip_seeds",
 			() -> new BlockItem(BlockInit.CATNIP.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-	
+
 	public static final RegistryObject<Item> CATNIP = ITEMS.register("catnip",
 			() -> new Item(new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-	
+
 	// Food
 	public static final RegistryObject<Item> FISH_TACO = ITEMS.register("fish_taco",
 			() -> new Item(new Item.Properties().group(Cat_Mod.CATMOD_GROUP).food(FoodInit.FISH_TACO)));
@@ -75,22 +75,22 @@ public class ItemInit {
 
 	public static final RegistryObject<BlockItem> CUSTOM_BLOCK = ITEMS.register("custom_block",
 			() -> new BlockItem(BlockInit.CUSTOM_BLOCK.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-	
+
 	public static final RegistryObject<BlockItem> LITTER_BOX_RED = ITEMS.register("litter_box_red",
 			() -> new BlockItem(BlockInit.LITTER_BOX_RED.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-	
+
 	public static final RegistryObject<BlockItem> PINK_GRASS = ITEMS.register("pink_grass",
 			() -> new BlockItem(BlockInit.PINK_GRASS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
 	public static final RegistryObject<BlockItem> CAT_LEAVES = ITEMS.register("cat_leaves",
 			() -> new BlockItem(BlockInit.CAT_LEAVES.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-	
+
 	public static final RegistryObject<BlockItem> CAT_LOG = ITEMS.register("cat_log",
 			() -> new BlockItem(BlockInit.CAT_LOG.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-	
-	public static final RegistryObject<BlockItem> CAT_TREE_SAPLING = ITEMS.register("cat_tree_sapling",
-			() -> new BlockItem(BlockInit.CAT_TREE_SAPLING.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-	
+
+	public static final RegistryObject<Item> CAT_TREE_SAPLING = ITEMS.register("cat_tree_sapling",
+			() -> new BlockItem(BlockInit.CAT_TREE_SAPLING.get(), (new Item.Properties()).group(Cat_Mod.CATMOD_GROUP)));
+
 	// Armor
 	public static final RegistryObject<ArmorItem> CAT_HELMET = ITEMS.register("cat_helmet",
 			() -> new ArmorItem(ModArmorMaterial.CAT, EquipmentSlotType.HEAD,
@@ -179,8 +179,8 @@ public class ItemInit {
 
 	// Armor
 	public enum ModArmorMaterial implements IArmorMaterial {
-		CAT(Cat_Mod.MOD_ID + ":cat_armor", 5, new int[] { 14, 18, 22, 14 }, 420, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 6.9F,
-				() -> {
+		CAT(Cat_Mod.MOD_ID + ":cat_armor", 5, new int[] { 14, 18, 22, 14 }, 420, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
+				6.9F, () -> {
 					return Ingredient.fromItems(ItemInit.SUPER_CAT_GEM.get());
 				});
 

@@ -31,7 +31,7 @@ public class EventHandler {
 			EventHandler.setBlocks(world, pos, world.getRandom());
 		}
 
-		else if (event.getPlayer().hasItemInSlot(EquipmentSlotType.HEAD) && world instanceof World) {
+		else if (event.getPlayer().hasItemInSlot(EquipmentSlotType.OFFHAND) && world instanceof World) {
 			CatEntity catEntity = new CatEntity(EntityType.CAT, (World) world);
 			catEntity.setPosition(pos.getX(), pos.getY(), pos.getZ());
 			world.addEntity(catEntity);
