@@ -40,7 +40,6 @@ public class Cat_Mod {
 
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
-		FeatureInit.registerTrees();
 		//BiomeInit.registerBiomes();
 		// EntityTypeInit.ENTITY_TYPES.register(bus);
 		// SoundInit.SOUNDS.register(bus);
@@ -67,6 +66,7 @@ public class Cat_Mod {
 	private void setup(final FMLCommonSetupEvent event) {
 
 		RenderTypeLookup.setRenderLayer(BlockInit.CAT_TREE_SAPLING.get(), RenderType.getCutout());
+		FeatureInit.registerTrees();
 
 	}
 
