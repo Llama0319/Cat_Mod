@@ -40,7 +40,7 @@ public class Cat_Mod {
 
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
-		FeatureInit.FEATURES.register(bus);
+		FeatureInit.registerTrees();
 		//BiomeInit.registerBiomes();
 		// EntityTypeInit.ENTITY_TYPES.register(bus);
 		// SoundInit.SOUNDS.register(bus);
