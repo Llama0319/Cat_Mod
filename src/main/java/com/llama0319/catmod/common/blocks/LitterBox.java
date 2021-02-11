@@ -13,14 +13,14 @@ import net.minecraft.world.IBlockReader;
 public class LitterBox extends BaseHorizontalBlock{
 	
 	private static final VoxelShape SHAPE = Stream.of(
-			Block.makeCuboidShape(2, 2, 1, 14, 3, 14),
-			Block.makeCuboidShape(2, 0, 14, 14, 5, 16),
-			Block.makeCuboidShape(2, 0, 0, 14, 5, 2),
+			Block.makeCuboidShape(1, 2, 2, 14, 3, 14),
+			Block.makeCuboidShape(14, 0, 2, 16, 5, 14),
+			Block.makeCuboidShape(0, 0, 2, 2, 5, 14),
 			Block.makeCuboidShape(2, 0, 2, 14, 0, 14),
-			Block.makeCuboidShape(0, 0, 0, 2, 5, 16),
-			Block.makeCuboidShape(14, 0, 0, 16, 5, 4),
-			Block.makeCuboidShape(14, 0, 4, 16, 3, 12),
-			Block.makeCuboidShape(14, 0, 12, 16, 5, 16)
+			Block.makeCuboidShape(0, 0, 14, 16, 5, 16),
+			Block.makeCuboidShape(0, 0, 0, 4, 5, 2),
+			Block.makeCuboidShape(4, 0, 0, 12, 3, 2),
+			Block.makeCuboidShape(12, 0, 0, 16, 5, 2)
 			).reduce((v1, v2) -> {return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get();
 
 	public LitterBox(Properties properties) {
@@ -30,6 +30,6 @@ public class LitterBox extends BaseHorizontalBlock{
 	
 	@Override
 	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-		return SHAPES.get(state.get(HORIZONTAL_FACING));
+		return SHAPES.get(this).get(state.get(HORIZONTAL_FACING));
 	}
 }

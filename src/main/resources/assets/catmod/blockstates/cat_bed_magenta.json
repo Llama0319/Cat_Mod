@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "catmod:block/cat_bed/cat_bed_magenta" },
+        "facing=south": { "model": "catmod:block/cat_bed/cat_bed_magenta", "y": 180 },
+        "facing=west":  { "model": "catmod:block/cat_bed/cat_bed_magenta", "y": 270 },
+        "facing=east":  { "model": "catmod:block/cat_bed/cat_bed_magenta", "y": 90 }
+    }
+}

@@ -3,7 +3,7 @@ package com.llama0319.catmod.core.event;
 import java.util.Random;
 
 import com.llama0319.catmod.Cat_Mod;
-import com.llama0319.catmod.common.blocks.CustomBlock;
+import com.llama0319.catmod.common.blocks.CatBed;
 import com.llama0319.catmod.core.init.BlockInit;
 
 import net.minecraft.block.AnvilBlock;
@@ -44,7 +44,7 @@ public class EventHandler {
 				for (int z = -5; z < 5; z++) {
 					world.setBlockState(
 							pos.add(x, y, z), BlockInit.CUSTOM_BLOCK.get().getDefaultState()
-									.with(CustomBlock.HORIZONTAL_FACING, Direction.Plane.HORIZONTAL.random(rand)),
+									.with(CatBed.HORIZONTAL_FACING, Direction.Plane.HORIZONTAL.random(rand)),
 							Constants.BlockFlags.BLOCK_UPDATE);
 				}
 			}

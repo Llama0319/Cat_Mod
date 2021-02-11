@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#W#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:oak_planks"
+        },
+        "W": {
+            "item": "minecraft:pink_wool"
+        }
+    },
+    "result": {
+        "item": "catmod:cat_bed_pink",
+        "count": 1
+    }
+}

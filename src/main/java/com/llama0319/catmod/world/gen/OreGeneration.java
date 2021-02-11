@@ -16,7 +16,8 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 public class OreGeneration {
 
 	public static void generateOres(final BiomeLoadingEvent event) {
-		if (!(event.getCategory().equals(Biome.Category.NETHER) || event.getCategory().equals(Biome.Category.THEEND))) {
+		if (!(event.getCategory().equals(Biome.Category.NETHER) || event.getCategory().equals(Biome.Category.THEEND)
+				|| event.getCategory().equals(Biome.Category.BEACH))) {
 			generateOre(event.getGeneration(), OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
 					BlockInit.CAT_ORE.get().getDefaultState(), 5, 15, 30, 10);
 		}

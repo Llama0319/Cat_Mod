@@ -28,6 +28,9 @@ public class ItemInit {
 
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Cat_Mod.MOD_ID);
 
+	public static final RegistryObject<BlockItem> TEST = ITEMS.register("test",
+			() -> new BlockItem(BlockInit.TEST.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
 	public static final RegistryObject<Item> SCREAMING_CAT = ITEMS.register("screaming_cat",
 			() -> new Item(new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
@@ -63,22 +66,141 @@ public class ItemInit {
 	// Advanced Items
 	public static final RegistryObject<SpecialItem> CAT_STAFF = ITEMS.register("cat_staff",
 			() -> new SpecialItem(new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-
+	
 	// Fuel
 
 	// Block Items
 	public static final RegistryObject<BlockItem> CAT_ORE = ITEMS.register("cat_ore",
 			() -> new BlockItem(BlockInit.CAT_ORE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
+	public static final RegistryObject<BlockItem> CAT_PLANKS = ITEMS.register("cat_planks",
+			() -> new BlockItem(BlockInit.CAT_PLANKS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
 	public static final RegistryObject<BlockItem> HEART_ORE = ITEMS.register("heart_ore",
 			() -> new BlockItem(BlockInit.HEART_ORE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
-	public static final RegistryObject<BlockItem> CUSTOM_BLOCK = ITEMS.register("custom_block",
-			() -> new BlockItem(BlockInit.CUSTOM_BLOCK.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	// Cat Beds
+	public static final RegistryObject<BlockItem> CAT_BED_RED = ITEMS.register("cat_bed_red",
+			() -> new BlockItem(BlockInit.CAT_BED_RED.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
+	public static final RegistryObject<BlockItem> CAT_BED_ORANGE = ITEMS.register("cat_bed_orange",
+			() -> new BlockItem(BlockInit.CAT_BED_ORANGE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_YELLOW = ITEMS.register("cat_bed_yellow",
+			() -> new BlockItem(BlockInit.CAT_BED_YELLOW.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_GREEN = ITEMS.register("cat_bed_green",
+			() -> new BlockItem(BlockInit.CAT_BED_GREEN.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_LIME_GREEN = ITEMS.register("cat_bed_lime_green",
+			() -> new BlockItem(BlockInit.CAT_BED_LIME_GREEN.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_CYAN = ITEMS.register("cat_bed_cyan",
+			() -> new BlockItem(BlockInit.CAT_BED_CYAN.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_BLUE = ITEMS.register("cat_bed_blue",
+			() -> new BlockItem(BlockInit.CAT_BED_BLUE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_LIGHT_BLUE = ITEMS.register("cat_bed_light_blue",
+			() -> new BlockItem(BlockInit.CAT_BED_LIGHT_BLUE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_PURPLE = ITEMS.register("cat_bed_purple",
+			() -> new BlockItem(BlockInit.CAT_BED_PURPLE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_MAGENTA = ITEMS.register("cat_bed_magenta",
+			() -> new BlockItem(BlockInit.CAT_BED_MAGENTA.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_PINK = ITEMS.register("cat_bed_pink",
+			() -> new BlockItem(BlockInit.CAT_BED_PINK.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_LIGHT_GRAY = ITEMS.register("cat_bed_light_gray",
+			() -> new BlockItem(BlockInit.CAT_BED_LIGHT_GRAY.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_GRAY = ITEMS.register("cat_bed_gray",
+			() -> new BlockItem(BlockInit.CAT_BED_GRAY.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_BLACK = ITEMS.register("cat_bed_black",
+			() -> new BlockItem(BlockInit.CAT_BED_BLACK.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_BROWN = ITEMS.register("cat_bed_brown",
+			() -> new BlockItem(BlockInit.CAT_BED_BROWN.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_BED_WHITE = ITEMS.register("cat_bed_white",
+			() -> new BlockItem(BlockInit.CAT_BED_WHITE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	// Litter Boxes
 	public static final RegistryObject<BlockItem> LITTER_BOX_RED = ITEMS.register("litter_box_red",
 			() -> new BlockItem(BlockInit.LITTER_BOX_RED.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
+	public static final RegistryObject<BlockItem> LITTER_BOX_ORANGE = ITEMS.register("litter_box_orange",
+			() -> new BlockItem(BlockInit.LITTER_BOX_ORANGE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_YELLOW = ITEMS.register("litter_box_yellow",
+			() -> new BlockItem(BlockInit.LITTER_BOX_YELLOW.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_GREEN = ITEMS.register("litter_box_green",
+			() -> new BlockItem(BlockInit.LITTER_BOX_GREEN.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_LIME_GREEN = ITEMS.register("litter_box_lime_green",
+			() -> new BlockItem(BlockInit.LITTER_BOX_LIME_GREEN.get(),
+					new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_CYAN = ITEMS.register("litter_box_cyan",
+			() -> new BlockItem(BlockInit.LITTER_BOX_CYAN.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_BLUE = ITEMS.register("litter_box_blue",
+			() -> new BlockItem(BlockInit.LITTER_BOX_BLUE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_LIGHT_BLUE = ITEMS.register("litter_box_light_blue",
+			() -> new BlockItem(BlockInit.LITTER_BOX_LIGHT_BLUE.get(),
+					new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_PURPLE = ITEMS.register("litter_box_purple",
+			() -> new BlockItem(BlockInit.LITTER_BOX_PURPLE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_MAGENTA = ITEMS.register("litter_box_magenta",
+			() -> new BlockItem(BlockInit.LITTER_BOX_MAGENTA.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_PINK = ITEMS.register("litter_box_pink",
+			() -> new BlockItem(BlockInit.LITTER_BOX_PINK.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_LIGHT_GRAY = ITEMS.register("litter_box_light_gray",
+			() -> new BlockItem(BlockInit.LITTER_BOX_LIGHT_GRAY.get(),
+					new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_GRAY = ITEMS.register("litter_box_gray",
+			() -> new BlockItem(BlockInit.LITTER_BOX_GRAY.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_BLACK = ITEMS.register("litter_box_black",
+			() -> new BlockItem(BlockInit.LITTER_BOX_BLACK.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_BROWN = ITEMS.register("litter_box_brown",
+			() -> new BlockItem(BlockInit.LITTER_BOX_BROWN.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> LITTER_BOX_WHITE = ITEMS.register("litter_box_white",
+			() -> new BlockItem(BlockInit.LITTER_BOX_WHITE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	// Cat Tower
+	public static final RegistryObject<BlockItem> CAT_TOWER_BED = ITEMS.register("cat_tower_bed",
+			() -> new BlockItem(BlockInit.CAT_TOWER_BED.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_TOWER_PLATFORM = ITEMS.register("cat_tower_platform",
+			() -> new BlockItem(BlockInit.CAT_TOWER_PLATFORM.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_TOWER_CAVE = ITEMS.register("cat_tower_cave",
+			() -> new BlockItem(BlockInit.CAT_TOWER_CAVE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> SCRATCHING_POST = ITEMS.register("scratching_post",
+			() -> new BlockItem(BlockInit.SCRATCHING_POST.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_TOWER_BALL_ON_STRING = ITEMS.register("cat_tower_ball_on_string",
+			() -> new BlockItem(BlockInit.CAT_TOWER_BALL_ON_STRING.get(),
+					new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_TOWER_BASE_TOY = ITEMS.register("cat_tower_base_toy",
+			() -> new BlockItem(BlockInit.CAT_TOWER_BASE_TOY.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	// Environment
 	public static final RegistryObject<BlockItem> PINK_GRASS = ITEMS.register("pink_grass",
 			() -> new BlockItem(BlockInit.PINK_GRASS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "catmod:block/cat_bed/cat_bed_light_blue" },
+        "facing=south": { "model": "catmod:block/cat_bed/cat_bed_light_blue", "y": 180 },
+        "facing=west":  { "model": "catmod:block/cat_bed/cat_bed_light_blue", "y": 270 },
+        "facing=east":  { "model": "catmod:block/cat_bed/cat_bed_light_blue", "y": 90 }
+    }
+}

@@ -7,17 +7,17 @@ import com.llama0319.catmod.core.init.BiomeInit;
 import com.llama0319.catmod.core.init.BlockInit;
 import com.llama0319.catmod.core.init.FeatureInit;
 import com.llama0319.catmod.core.init.ItemInit;
-import com.llama0319.catmod.core.init.SpawnEggInit;
+
 import com.llama0319.catmod.world.gen.OreGeneration;
 import com.llama0319.catmod.common.blocks.Catnip;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.entity.EntityType;
+
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -33,6 +33,7 @@ public class Cat_Mod {
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static final String MOD_ID = "catmod";
 	public static final ItemGroup CATMOD_GROUP = new CatMod("catmodtab");
+	public static final ResourceLocation CAT_DIM_TYPE = new ResourceLocation(MOD_ID, "cat");
 
 	public Cat_Mod() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -40,7 +41,7 @@ public class Cat_Mod {
 
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
-		//BiomeInit.registerBiomes();
+		BiomeInit.BIOMES.register(bus);
 		// EntityTypeInit.ENTITY_TYPES.register(bus);
 		// SoundInit.SOUNDS.register(bus);
 
@@ -80,15 +81,5 @@ public class Cat_Mod {
 		public ItemStack createIcon() {
 			return ItemInit.SCREAMING_CAT.get().getDefaultInstance();
 		}
-	}
-
-	@SubscribeEvent
-	public static void onRegisterEntities(final RegistryEvent.Register<EntityType<?>> event) {
-		SpawnEggInit.initSpawnEggs();
-	}
-
-	@SubscribeEvent
-	public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
-		BiomeInit.registerBiomes();
 	}
 }

@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"catmod:cat_leaves",
+		"minecraft:oak_leaves"
+	]
+}

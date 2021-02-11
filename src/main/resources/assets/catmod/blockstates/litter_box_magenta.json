@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "catmod:block/litter_box/litter_box_magenta" },
+        "facing=south": { "model": "catmod:block/litter_box/litter_box_magenta", "y": 180 },
+        "facing=west":  { "model": "catmod:block/litter_box/litter_box_magenta", "y": 270 },
+        "facing=east":  { "model": "catmod:block/litter_box/litter_box_magenta", "y": 90 }
+    }
+}

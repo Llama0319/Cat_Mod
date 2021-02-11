@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#W#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:purple_concrete"
+        },
+        "W": {
+            "item": "minecraft:sand"
+        }
+    },
+    "result": {
+        "item": "catmod:litter_box_purple",
+        "count": 1
+    }
+}

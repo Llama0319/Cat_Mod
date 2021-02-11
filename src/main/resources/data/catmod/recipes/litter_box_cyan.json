@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#W#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:cyan_concrete"
+        },
+        "W": {
+            "item": "minecraft:sand"
+        }
+    },
+    "result": {
+        "item": "catmod:litter_box_cyan",
+        "count": 1
+    }
+}

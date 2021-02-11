@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "catmod:block/cat_tower/cat_tower_cave" },
+        "facing=south": { "model": "catmod:block/cat_tower/cat_tower_cave", "y": 180 },
+        "facing=west":  { "model": "catmod:block/cat_tower/cat_tower_cave", "y": 270 },
+        "facing=east":  { "model": "catmod:block/cat_tower/cat_tower_cave", "y": 90 }
+    }
+}

@@ -28,18 +28,12 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.registries.ForgeRegistries;
-import software.bernie.geckolib.animation.builder.AnimationBuilder;
-import software.bernie.geckolib.animation.controller.AnimationController;
-import software.bernie.geckolib.animation.controller.EntityAnimationController;
-import software.bernie.geckolib.entity.IAnimatedEntity;
-import software.bernie.geckolib.event.AnimationTestEvent;
-import software.bernie.geckolib.event.ParticleKeyFrameEvent;
-import software.bernie.geckolib.event.SoundKeyframeEvent;
-import software.bernie.geckolib.manager.EntityAnimationManager;
 
 public class SquirrelEntity extends AnimalEntity {
 
@@ -48,16 +42,20 @@ public class SquirrelEntity extends AnimalEntity {
 
 	public SquirrelEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
 		super(type, worldIn);
-	
+
 	}
 
-	@Override
 	public AgeableEntity createChild(AgeableEntity ageable) {
 		SquirrelEntity entity = new SquirrelEntity(EntityTypeInit.SQUIRREL_ENTITY.get(), this.world);
 		entity.onInitialSpawn(this.world, this.world.getDifficultyForLocation(new BlockPos(entity)),
 				SpawnReason.BREEDING, (ILivingEntityData) null, (CompoundNBT) null);
 		entity.setGlowing(true);
 		return entity;
+	}
+
+	private void onInitialSpawn(World world, DifficultyInstance difficultyForLocation, SpawnReason breeding,
+			ILivingEntityData spawnDataIn, CompoundNBT dataTag) {
+		
 	}
 
 	@Override
@@ -89,7 +87,6 @@ public class SquirrelEntity extends AnimalEntity {
 		super.livingTick();
 	}
 
-	@Override
 	protected void registerAttributes() {
 		super.registerAttributes();
 		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(16.0D);
@@ -128,30 +125,12 @@ public class SquirrelEntity extends AnimalEntity {
 		}
 	}
 
-	@Override
-	public void onStruckByLightning(LightningBoltEntity lightningBolt) {
-		this.setGlowing(true);
-	}
-
 	protected SoundEvent getEntityAmbientSound() {
 		return SoundInit.AMBIENT.get();
 	}
 
-	private <E extends Entity> SoundEvent soundListener(SoundKeyframeEvent<E> event) {
-		if (event.sound.equals("test")) {
-			return (SoundEvent) ForgeRegistries.SOUND_EVENTS.getValues().toArray()[rand
-					.nextInt(ForgeRegistries.SOUND_EVENTS.getValues().size())];
-		} else {
-			return getEntityAmbientSound();
-		}
+	@Override
+	public AgeableEntity func_241840_a(ServerWorld p_241840_1_, AgeableEntity p_241840_2_) {
+		return null;
 	}
-
-	private <E extends Entity> void particleListener(ParticleKeyFrameEvent<E> event) {
-		if (event.effect.equals("test")) {
-			event.getEntity().getEntityWorld().addParticle(new ColouredParticleData(0.2f, 0.7f, 0.5f, 1.0f),
-					event.getEntity().getPosX(), event.getEntity().getPosY(), event.getEntity().getPosZ(), 0.0f, 0.4f,
-					0.0f);
-		}
-	}
-
 }
