@@ -2,7 +2,7 @@
 	"textures": {
 		"0": "catmod:blocks/decoration/litter_boxes/lime_green_concrete",
 		"1": "catmod:blocks/decoration/litter_boxes/sand",
-		"particle": "minecraft:block/lime_green_concrete"
+		"particle": "minecraft:block/lime_concrete"
 	},
 	"elements": [
 		{
