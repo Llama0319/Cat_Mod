@@ -66,18 +66,21 @@ public class ItemInit {
 	// Advanced Items
 	public static final RegistryObject<SpecialItem> CAT_STAFF = ITEMS.register("cat_staff",
 			() -> new SpecialItem(new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-	
+
 	// Fuel
 
 	// Block Items
 	public static final RegistryObject<BlockItem> CAT_ORE = ITEMS.register("cat_ore",
 			() -> new BlockItem(BlockInit.CAT_ORE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
-	public static final RegistryObject<BlockItem> CAT_PLANKS = ITEMS.register("cat_planks",
-			() -> new BlockItem(BlockInit.CAT_PLANKS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-
 	public static final RegistryObject<BlockItem> HEART_ORE = ITEMS.register("heart_ore",
 			() -> new BlockItem(BlockInit.HEART_ORE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_STONE = ITEMS.register("cat_stone",
+			() -> new BlockItem(BlockInit.CAT_STONE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_PLANKS = ITEMS.register("cat_planks",
+			() -> new BlockItem(BlockInit.CAT_PLANKS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
 	// Cat Beds
 	public static final RegistryObject<BlockItem> CAT_BED_RED = ITEMS.register("cat_bed_red",
@@ -201,8 +204,8 @@ public class ItemInit {
 			() -> new BlockItem(BlockInit.CAT_TOWER_BASE_TOY.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
 	// Environment
-	public static final RegistryObject<BlockItem> PINK_GRASS = ITEMS.register("pink_grass",
-			() -> new BlockItem(BlockInit.PINK_GRASS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	public static final RegistryObject<BlockItem> PINK_GRASS = ITEMS.register("pink_grass_block",
+			() -> new BlockItem(BlockInit.PINK_GRASS_BLOCK.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
 	public static final RegistryObject<BlockItem> CAT_LEAVES = ITEMS.register("cat_leaves",
 			() -> new BlockItem(BlockInit.CAT_LEAVES.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "catmod:screaming_cat",
+    "catmod:heart_gem",
+    "catmod:cat_gem",
+    "catmod:super_cat_gem"
+  ]
+}

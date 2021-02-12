@@ -1,5 +1,9 @@
 package com.llama0319.catmod.world.biomes;
 
+import com.llama0319.catmod.core.init.BlockInit;
+import com.llama0319.catmod.core.init.FeatureInit;
+
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.math.MathHelper;
@@ -11,15 +15,18 @@ import net.minecraft.world.biome.BiomeAmbience;
 import net.minecraft.world.biome.BiomeGenerationSettings;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ISurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 
 public class BiomeMaker {
 
 	public static Biome makeBiome() {
 		BiomeGenerationSettings.Builder generationSettings = genSettings(SurfaceBuilder.DEFAULT,
-				SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG);
+				new SurfaceBuilderConfig(BlockInit.PINK_GRASS_BLOCK.get().getDefaultState(),
+						BlockInit.CAT_STONE.get().getDefaultState(), Blocks.DIRT.getDefaultState()));
 
 		WorldGenRegistries.init();
 
@@ -31,6 +38,10 @@ public class BiomeMaker {
 		DefaultBiomeFeatures.withCommonOverworldBlocks(generationSettings);
 		DefaultBiomeFeatures.withOverworldOres(generationSettings);
 		DefaultBiomeFeatures.withDisks(generationSettings);
+		DefaultBiomeFeatures.withAllForestFlowerGeneration(generationSettings);
+		DefaultBiomeFeatures.withBirchTrees(generationSettings);
+		DefaultBiomeFeatures.withOverworldOres(generationSettings);
+		generationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FeatureInit.CAT_TREE);
 		DefaultBiomeFeatures.withDefaultFlowers(generationSettings);
 
 		MobSpawnInfo.Builder spawnSettings = new MobSpawnInfo.Builder();
@@ -38,7 +49,6 @@ public class BiomeMaker {
 		// MobSpawnInfo.Spawners(EntityTypeRegistry.RUBY_SHEEP, 12, 2, 3));
 		spawnSettings.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.CAT, 5, 1, 3));
 		DefaultBiomeFeatures.withPassiveMobs(spawnSettings);
-
 
 		return biome(RainType.NONE, Category.PLAINS, 0.13f, 0.5f, 0.5f, 0.3f,
 				new BiomeAmbience.Builder().withGrassColor(0xe80a0a).setWaterColor(0x3f76e4).setWaterFogColor(0x50533)

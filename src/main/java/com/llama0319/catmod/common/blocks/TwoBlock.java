@@ -106,9 +106,8 @@ public class TwoBlock extends BushBlock {
 		builder.add(HALF);
 	}
 
-	@Override
 	protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
 		return state.isIn(Blocks.GRASS_BLOCK) || state.isIn(Blocks.DIRT) || state.isIn(Blocks.COARSE_DIRT)
-				|| state.isIn(Blocks.PODZOL) || state.isIn(Blocks.OAK_PLANKS) || state.isIn(Blocks.ACACIA_PLANKS);
+				|| state.isIn(Blocks.PODZOL) || state.isIn(Blocks.FARMLAND);
 	}
 }

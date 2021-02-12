@@ -30,8 +30,9 @@
 	//Blocks
 	"block.catmod.cat_ore": "Cat Ore",
 	"block.catmod.heart_ore": "Heart Ore",
+	"block.catmod.cat_stone":"Cat Stone",
 	"block.catmod.catnip": "Catnip Seeds",
-	"block.catmod.pink_grass": "Pink Grass",
+	"block.catmod.pink_grass_block": "Pink Grass",
 	"block.catmod.cat_log": "Cat Log",
 	"block.catmod.cat_tree_sapling": "Cat Tree Sapling",
 	"block.catmod.cat_leaves": "Cat Leaves",

@@ -37,14 +37,20 @@ public class BlockInit {
 			() -> new TwoBlock(AbstractBlock.Properties.from(Blocks.DARK_OAK_DOOR)));
 
 	// Ores
-	public static final RegistryObject<Block> CAT_ORE = BLOCKS.register("cat_ore",
-			() -> new Block(AbstractBlock.Properties.from(Blocks.DIAMOND_ORE)));
+	public static final RegistryObject<Block> CAT_ORE = BLOCKS
+			.register("cat_ore",
+					() -> new Block(AbstractBlock.Properties.create(Material.IRON, MaterialColor.BLUE)
+							.hardnessAndResistance(15f, 30f).harvestTool(ToolType.PICKAXE).harvestLevel(-1)
+							.sound(SoundType.METAL)));
 
 	public static final RegistryObject<Block> HEART_ORE = BLOCKS
 			.register("heart_ore",
 					() -> new Block(AbstractBlock.Properties.create(Material.IRON, MaterialColor.BLUE)
 							.hardnessAndResistance(15f, 30f).harvestTool(ToolType.PICKAXE).harvestLevel(-1)
 							.sound(SoundType.METAL)));
+
+	public static final RegistryObject<Block> CAT_STONE = BLOCKS.register("cat_stone", () -> new Block(
+			AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE).harvestTool(ToolType.PICKAXE)));
 
 	// Cat Beds
 	public static final RegistryObject<CatBed> CAT_BED_RED = BLOCKS.register("cat_bed_red",
@@ -206,8 +212,8 @@ public class BlockInit {
 			() -> new Catnip(Block.Properties.from(Blocks.WHEAT)));
 
 	// Plants and Environment
-	public static final RegistryObject<Block> PINK_GRASS = BLOCKS.register("pink_grass",
-			() -> new Block(Block.Properties.from(Blocks.GRASS_BLOCK)));
+	public static final RegistryObject<Block> PINK_GRASS_BLOCK = BLOCKS.register("pink_grass_block", () -> new Block(
+			AbstractBlock.Properties.create(Material.EARTH).harvestTool(ToolType.SHOVEL).sound(SoundType.GROUND)));
 
 	public static final RegistryObject<Block> CAT_LOG = BLOCKS.register("cat_log",
 			() -> new RotatedPillarBlock(Block.Properties.from(Blocks.OAK_LOG)));

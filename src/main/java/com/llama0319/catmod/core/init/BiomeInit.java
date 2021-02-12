@@ -23,7 +23,7 @@ public class BiomeInit {
 	public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES,
 			Cat_Mod.MOD_ID);
 
-	private static final RegistryObject<Biome> CAT_PLAINS = BIOMES.register("cat_plains", BiomeMaker::makeBiome);
+	public static final RegistryObject<Biome> CAT_PLAINS = BIOMES.register("cat_plains", BiomeMaker::makeBiome);
 	private static final RegistryKey<Biome> CAT_PLAINS_KEY = RegistryKey.getOrCreateKey(Registry.BIOME_KEY,
 			new ResourceLocation(Cat_Mod.MOD_ID, "cat_plains"));
 
@@ -31,7 +31,7 @@ public class BiomeInit {
 	public static void biomeLoading(BiomeLoadingEvent event) {
 		if (event.getName().equals(CAT_PLAINS.get().getRegistryName())) {
 			BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(CAT_PLAINS_KEY, 24));
-			BiomeDictionary.addTypes(CAT_PLAINS_KEY, Type.PLAINS, Type.MOUNTAIN);
+			BiomeDictionary.addTypes(CAT_PLAINS_KEY, Type.PLAINS);
 		}
 	}
 }

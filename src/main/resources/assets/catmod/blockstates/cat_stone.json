@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"": { "model": "catmod:block/cat_stone" }
+	}
+}
