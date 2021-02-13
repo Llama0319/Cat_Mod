@@ -39,7 +39,6 @@ public class BiomeMaker {
 		DefaultBiomeFeatures.withOverworldOres(generationSettings);
 		DefaultBiomeFeatures.withDisks(generationSettings);
 		DefaultBiomeFeatures.withAllForestFlowerGeneration(generationSettings);
-		DefaultBiomeFeatures.withBirchTrees(generationSettings);
 		DefaultBiomeFeatures.withOverworldOres(generationSettings);
 		generationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FeatureInit.CAT_TREE);
 		DefaultBiomeFeatures.withDefaultFlowers(generationSettings);

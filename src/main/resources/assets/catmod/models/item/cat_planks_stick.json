@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "catmod:item/cat_planks_stick"
+  }
+}

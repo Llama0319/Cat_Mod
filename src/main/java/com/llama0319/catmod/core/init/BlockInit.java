@@ -6,6 +6,7 @@ import com.llama0319.catmod.common.blocks.Catnip;
 import com.llama0319.catmod.common.blocks.CatBed;
 
 import com.llama0319.catmod.common.blocks.LitterBox;
+import com.llama0319.catmod.common.blocks.PinkGrassBlock;
 import com.llama0319.catmod.common.blocks.TwoBlock;
 import com.llama0319.catmod.common.blocks.cat_tower_parts.CatTowerBallOnString;
 import com.llama0319.catmod.common.blocks.cat_tower_parts.CatTowerBaseToy;
@@ -17,10 +18,13 @@ import com.llama0319.catmod.common.blocks.cat_tower_parts.ScratchingPost;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-
+import net.minecraft.block.DoublePlantBlock;
+import net.minecraft.block.GrassPathBlock;
+import net.minecraft.block.LadderBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.TallGrassBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.common.ToolType;
@@ -212,9 +216,6 @@ public class BlockInit {
 			() -> new Catnip(Block.Properties.from(Blocks.WHEAT)));
 
 	// Plants and Environment
-	public static final RegistryObject<Block> PINK_GRASS_BLOCK = BLOCKS.register("pink_grass_block", () -> new Block(
-			AbstractBlock.Properties.create(Material.EARTH).harvestTool(ToolType.SHOVEL).sound(SoundType.GROUND)));
-
 	public static final RegistryObject<Block> CAT_LOG = BLOCKS.register("cat_log",
 			() -> new RotatedPillarBlock(Block.Properties.from(Blocks.OAK_LOG)));
 
@@ -226,4 +227,32 @@ public class BlockInit {
 
 	public static final RegistryObject<Block> CAT_TREE_SAPLING = BLOCKS.register("cat_tree_sapling",
 			CatSaplingBlock::new);
+
+	public static final RegistryObject<PinkGrassBlock> PINK_GRASS_BLOCK = BLOCKS.register("pink_grass_block",
+			() -> new PinkGrassBlock(AbstractBlock.Properties.create(Material.ORGANIC).tickRandomly()
+					.hardnessAndResistance(0.6F).sound(SoundType.PLANT)));
+
+	public static final RegistryObject<TallGrassBlock> PINK_GRASS = BLOCKS.register("pink_grass",
+			() -> new TallGrassBlock(AbstractBlock.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement()
+					.zeroHardnessAndResistance().sound(SoundType.PLANT)));
+
+	public static final RegistryObject<DoublePlantBlock> TALL_PINK_GRASS = BLOCKS.register("tall_pink_grass",
+			() -> new DoublePlantBlock(AbstractBlock.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement()
+					.zeroHardnessAndResistance().sound(SoundType.PLANT)));
+
+	public static final RegistryObject<GrassPathBlock> PINK_GRASS_PATH = BLOCKS.register("pink_grass_path",
+			() -> new GrassPathBlock(AbstractBlock.Properties.create(Material.EARTH).hardnessAndResistance(0.65F)
+					.sound(SoundType.PLANT)));
+
+	public static final RegistryObject<DoublePlantBlock> LARGE_PINK_FERN = BLOCKS.register("large_pink_fern",
+			() -> new DoublePlantBlock(AbstractBlock.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement()
+					.zeroHardnessAndResistance().sound(SoundType.PLANT)));
+
+	public static final RegistryObject<TallGrassBlock> PINK_FERN = BLOCKS.register("pink_fern",
+			() -> new TallGrassBlock(AbstractBlock.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement()
+					.zeroHardnessAndResistance().sound(SoundType.PLANT)));
+
+	public static final RegistryObject<LadderBlock> CAT_PLANKS_LADDER = BLOCKS.register("cat_planks_ladder",
+			() -> new LadderBlock(AbstractBlock.Properties.create(Material.WOOD).doesNotBlockMovement()
+					.zeroHardnessAndResistance().sound(SoundType.LADDER)));
 }

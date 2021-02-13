@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/tinted_cross",
+  "textures": {
+    "cross": "catmod:blocks/environment/tall_pink_grass_bottom"
+  }
+}

@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=east": {
+			"model": "catmod:block/cat_planks_ladder",
+			"y": 90
+		},
+		"facing=north": {
+			"model": "catmod:block/cat_planks_ladder"
+		},
+		"facing=south": {
+			"model": "catmod:block/cat_planks_ladder",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "catmod:block/cat_planks_ladder",
+			"y": 270
+		}
+	}
+}

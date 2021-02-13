@@ -32,11 +32,17 @@
 	"block.catmod.heart_ore": "Heart Ore",
 	"block.catmod.cat_stone":"Cat Stone",
 	"block.catmod.catnip": "Catnip Seeds",
-	"block.catmod.pink_grass_block": "Pink Grass",
 	"block.catmod.cat_log": "Cat Log",
 	"block.catmod.cat_tree_sapling": "Cat Tree Sapling",
+	"block.catmod.pink_grass_block": "Pink Grass",
+	"block.catmod.pink_grass_path": "Pink Grass Path",
+	"block.catmod.pink_grass": "Pink Grass",
+	"block.catmod.pink_fern": "Pink Fern",
+	"block.catmod.large_pink_fern": "Large Pink Fern",
+	"block.catmod.tall_pink_grass": "Tall Pink Grass",
 	"block.catmod.cat_leaves": "Cat Leaves",
 	"block.catmod.cat_planks": "Cat Planks",
+	"block.catmod.cat_planks_ladder":"Cat Planks Ladder",
 	
 	//Cat Beds
 	"block.catmod.cat_bed_red": "Red Cat Bed",

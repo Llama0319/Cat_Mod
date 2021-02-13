@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "catmod:block/large_pink_fern_bottom"
+    },
+    "half=upper": {
+      "model": "catmod:block/large_pink_fern_top"
+    }
+  }
+}

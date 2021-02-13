@@ -16,9 +16,10 @@ public class CatSaplingBlock extends SaplingBlock {
 		super(new CatTree(), AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly()
 				.zeroHardnessAndResistance().sound(SoundType.PLANT));
 	}
-	
+
 	protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
 		return state.isIn(Blocks.GRASS_BLOCK) || state.isIn(Blocks.DIRT) || state.isIn(Blocks.COARSE_DIRT)
-				|| state.isIn(Blocks.PODZOL) || state.isIn(Blocks.FARMLAND) || state.isIn(BlockInit.PINK_GRASS_BLOCK.get());
+				|| state.isIn(Blocks.PODZOL) || state.isIn(Blocks.FARMLAND)
+				|| state.isIn(BlockInit.PINK_GRASS_BLOCK.get());
 	}
 }

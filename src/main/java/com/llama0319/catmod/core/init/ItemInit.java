@@ -76,12 +76,6 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> HEART_ORE = ITEMS.register("heart_ore",
 			() -> new BlockItem(BlockInit.HEART_ORE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
-	public static final RegistryObject<BlockItem> CAT_STONE = ITEMS.register("cat_stone",
-			() -> new BlockItem(BlockInit.CAT_STONE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-
-	public static final RegistryObject<BlockItem> CAT_PLANKS = ITEMS.register("cat_planks",
-			() -> new BlockItem(BlockInit.CAT_PLANKS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
-
 	// Cat Beds
 	public static final RegistryObject<BlockItem> CAT_BED_RED = ITEMS.register("cat_bed_red",
 			() -> new BlockItem(BlockInit.CAT_BED_RED.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
@@ -204,7 +198,7 @@ public class ItemInit {
 			() -> new BlockItem(BlockInit.CAT_TOWER_BASE_TOY.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
 	// Environment
-	public static final RegistryObject<BlockItem> PINK_GRASS = ITEMS.register("pink_grass_block",
+	public static final RegistryObject<BlockItem> PINK_GRASS_BLOCK = ITEMS.register("pink_grass_block",
 			() -> new BlockItem(BlockInit.PINK_GRASS_BLOCK.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
 
 	public static final RegistryObject<BlockItem> CAT_LEAVES = ITEMS.register("cat_leaves",
@@ -215,6 +209,31 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> CAT_TREE_SAPLING = ITEMS.register("cat_tree_sapling",
 			() -> new BlockItem(BlockInit.CAT_TREE_SAPLING.get(), (new Item.Properties()).group(Cat_Mod.CATMOD_GROUP)));
+	
+	public static final RegistryObject<Item> PINK_GRASS = ITEMS.register("pink_grass",
+			() -> new BlockItem(BlockInit.PINK_GRASS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
+	public static final RegistryObject<Item> PINK_FERN = ITEMS.register("pink_fern",
+			() -> new BlockItem(BlockInit.PINK_FERN.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
+	public static final RegistryObject<Item> LARGE_PINK_FERN = ITEMS.register("large_pink_fern",
+			() -> new BlockItem(BlockInit.LARGE_PINK_FERN.get(), (new Item.Properties()).group(Cat_Mod.CATMOD_GROUP)));
+	
+	public static final RegistryObject<BlockItem> TALL_PINK_GRASS = ITEMS.register("tall_pink_grass",
+			() -> new BlockItem(BlockInit.TALL_PINK_GRASS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
+	public static final RegistryObject<BlockItem> PINK_GRASS_PATH = ITEMS.register("pink_grass_path",
+			() -> new BlockItem(BlockInit.PINK_GRASS_PATH.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
+	public static final RegistryObject<BlockItem> CAT_STONE = ITEMS.register("cat_stone",
+			() -> new BlockItem(BlockInit.CAT_STONE.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
+	public static final RegistryObject<BlockItem> CAT_PLANKS = ITEMS.register("cat_planks",
+			() -> new BlockItem(BlockInit.CAT_PLANKS.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+	
+	public static final RegistryObject<BlockItem> CAT_PLANKS_LADDER = ITEMS.register("cat_planks_ladder",
+			() -> new BlockItem(BlockInit.CAT_PLANKS_LADDER.get(), new Item.Properties().group(Cat_Mod.CATMOD_GROUP)));
+
 
 	// Armor
 	public static final RegistryObject<ArmorItem> CAT_HELMET = ITEMS.register("cat_helmet",
